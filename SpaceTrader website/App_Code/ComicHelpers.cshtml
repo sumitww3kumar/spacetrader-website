@@ -1,0 +1,111 @@
+﻿@using SpaceTrader.Views;
+@using System.Web.Mvc;
+
+@helper NavButton(string caption, string style, string href, bool enabled)
+{
+    <a class="arrow-button @style @(enabled? "" : "disabled")"
+       @if (enabled)
+       {
+           <text>href="@href"</text>
+       }>
+       <span class="caption">@caption</span>
+    </a>
+}
+
+@helper Paginator(UrlHelper urlHelper, PageViewModel pageView) {
+var prevButtonEnabled = !pageView.First;
+var nextButtonEnabled = !pageView.Last;
+
+var firstPageUrl = urlHelper.Action("pages", new { id = 0 });
+var lastPageUrl = urlHelper.Action("pages", new { id = UrlParameter.Optional });
+
+var prevPageUrl = urlHelper.Action("pages", new { id = Math.Max(0, pageView.PageIndex - 1) });
+var nextPageUrl = urlHelper.Action("pages", new { id = Math.Min(pageView.Folder.PageCount, pageView.PageIndex + 1) });
+
+<div class="paginator">
+    @NavButton("First", "arrow-first", firstPageUrl, prevButtonEnabled);
+    @NavButton("Previous", "arrow-previous", prevPageUrl, prevButtonEnabled);
+    @NavButton("Next", "arrow-next", nextPageUrl, nextButtonEnabled);
+    @NavButton("Latest", "arrow-last", lastPageUrl, nextButtonEnabled);
+</div>
+}
+
+@helper ResponsiveComic(UrlHelper urlHelper, PageViewModel pageView, int pageWidth) {
+
+<style>
+	@if (pageWidth > 0)
+    {  
+    <text>
+	    .viewer-container {
+            min-width: @(pageWidth)px;
+        }
+
+	    .paginator {
+            width: @(pageWidth)px;
+        }
+
+	    .page {
+            width: @(pageWidth)px;
+        }
+
+	    @("@")media screen and (max-width: @(pageWidth)px) {
+		    .page - container {
+                display: block;
+            }
+
+		    .banner .banner-left {
+			    background-size: initial;
+		    }
+
+		    .page-info {
+			    width: initial;
+		    }
+	    }
+    </text>
+	}
+</style>
+
+<div class="page-container">
+    <div class="viewer-container">
+        <p class="page-nav-info">
+            @(pageView.PageIndex + 1)/@pageView.Folder.PageCount
+        </p>
+
+        @Paginator(urlHelper, pageView)
+
+        <img class="page" src="@pageView.ImagePath" />
+
+        @Paginator(urlHelper, pageView)
+        
+        <p class="chapter-nav-info">
+            Chapter @(pageView.Chapter.Ordinal + 1)
+            @if (!string.IsNullOrWhiteSpace(pageView.Chapter.Title))
+            {
+                <text>
+                    : @pageView.Chapter.Title
+                    <br />
+                    Page @pageView.PageNumber/@pageView.Chapter.PageCount
+                </text>
+            }
+        </p>
+    </div>
+
+    @*<div class="side-panel">
+        <div class="page-info">
+            <h2>Page for ${(page.date?date?string.iso)!"an unknown date"}</h2>
+            <p class="comment">
+                <#if (page.comment)??>
+                    ${page.comment}
+                    <#else>
+                        No commentary for this page
+                </#if>
+            </p>
+        </div>
+
+        <div class="twitter">
+
+        </div>
+    </div>*@
+</div>
+
+}

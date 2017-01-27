@@ -1,0 +1,11 @@
+﻿@using SpaceTrader.Views
+
+@model PageViewModel
+@{
+    Layout = "_Layout.cshtml";
+    ViewBag.Title = string.Format("Balance - Chapter {0}, Page {1}", Model.Chapter.Number, Model.PageNumber);
+
+    var pageSize = Model.Chapter.Ordinal == 0 ? 402 : 700;
+}
+
+@ComicHelpers.ResponsiveComic(Url, Model, pageSize)

@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Balance</title>
+    <link href="Content/index.css" rel="stylesheet" type="text/css" />
+    <link href="Content/favicon.png" rel="shortcut icon" type="image/png" />
+</head>
+<body>
+    <img class="title-logo" alt="Balance logo" width="600" height="150" src="Content/balance-logo-7.png" />
+
+    <div class="comics">
+        <div class="main">
+            <a href="balance" class="banner">
+                <img src="Content/balance-flag.png" />
+            </a>
+
+            <div class="description">
+                <p>
+                    It's the 28th century, and it's far too late to save the world. The
+                    ground is scorched, the air is radioactive, and nobody's seen the stars
+                    for hundreds of years. The Balance have conquered the world, and nobody
+                    has the strength to oppose them.
+                </p>
+
+                <p>
+                    A girl called Lysandra returns from the dead, halfway across the world
+                    from home and surrounded by enemies. Her sister's missing, she's being
+                    haunted by an insomniac ghost, and everyone's treating her like she's turned
+                    into some kind of monster...
+                </p>
+            </div>
+
+            <div class="links">
+                <a href="@Url.Action("pages", "Balance", 0)" class="first">Beginning</a>
+                <a href="@Url.Action("pages", "Balance", -1)" class="latest">Latest page</a>
+            </div>
+        </div>
+
+        <div class="others">
+            <h2>Dead Lines</h2>
+            <a href="@Url.Action("pages", "Deadlines", -1)" class="banner">
+                <img src="Content/deadlines.png" />
+            </a>
+
+            <div class="description">
+                <p>
+                    The everyday life of a TV sci-fi writer living in an alternate
+                    2014, and that one time a homeless alien and her roommate crashed
+                    on his sofa.
+                </p>
+                <p>A prequel to either Balance story.</p>
+            </div>
+        </div>
+
+        <div class="others">
+            <h2>Old archive</h2>
+            <a href="@Url.Action("pages", "OldBalance", 0)" class="banner">
+                <img src="Content/php25.png" />
+            </a>
+            <div class="description">
+                <p>The old Balance archive from before the reboot.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

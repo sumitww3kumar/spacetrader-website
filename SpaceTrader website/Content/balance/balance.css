@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+
+    color: white;
+}
+
+.banner {
+    display: block;
+    background-image: url(header_repeat.png);
+    background-size: contain;
+    height: 150px;
+}
+
+.banner .banner-left {
+    display: block;
+    background-image: url(header_left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+}
+
+.page-background {
+    overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    background: #363636;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #363636 0%, #3d3547 33%, black 66%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #363636), color-stop(33%, #3d3547), color-stop(66%, black));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #363636 0%, #3d3547 33%, black 66%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #363636 0%, #3d3547 33%, black 66%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #363636 0%, #3d3547 33%, black 66%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #363636 0%, #3d3547 33%, black 66%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#000000',GradientType=0 );
+    /* IE6-9 */
+}
+
+.navbar {
+    padding: 1em;
+    background: #363636;
+}
+
+.navbar a {
+    margin: 0 1em 0 0;
+    color: #CCC;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 125%;
+}
+
+.navbar a:hover, .navbar a:active {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.paginator {
+    display: block;
+    text-align: center;
+}
+
+.page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.page {
+    background: #000;
+    margin: 1em auto;
+    display: block;
+    border: 1px solid #EEE;
+}
+
+.viewer-container {
+    border-radius: 0.5em;
+    background: #FFF;
+    margin: 1em;
+    padding: 0.5em 1.5em;
+}
+
+.chapter-picker {
+    text-align: center;
+}
+
+.page-nav-info, .chapter-nav-info {
+    margin: 0.25em;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.page-info {
+    text-align: left;
+    width: 300px;
+    margin: 1em;
+    padding: 0.5em 1.5em;
+    background: #FFF;
+    border-radius: 0.5em;
+}
+
+.page-info h2 {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.paginator {
+    position: relative;
+    width: 600px;
+    height: 24px;
+    margin: 1em auto;
+    overflow: hidden;
+}
+
+.paginator .arrow-button {
+    width: 48px;
+    height: 24px;
+    position: absolute;
+    display: inline-block;
+}
+
+.paginator .arrow-button .caption {
+    display: none;
+}
+
+.paginator .arrow-button.arrow-first {
+    background: url(first.png);
+    left: 0;
+}
+
+.paginator .arrow-button.arrow-previous {
+    background: url(previous.png);
+    left: 64px;
+}
+
+.paginator .arrow-button.arrow-next {
+    background: url(next.png);
+    right: 64px;
+}
+
+.paginator .arrow-button.arrow-last {
+    background: url(last.png);
+    position: absolute;
+    right: 0px;
+}
+
+.paginator .arrow-button.disabled {
+    display: none;
+}
+
+.missing-page {
+    width: 500px;
+    line-height: 500px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    color: #EEE;
+    padding: 1em;
+}
+
+.twitter {
+    padding: 1em;
+}
+
+.twitter iframe {
+    width: 100% !important;
+}
+
+.character-list {
+    margin: 2em;
+    color: #FFF;
+    max-width: 600px;
+}
+
+.character-list h2 {
+    color: #CDCDCD;
+}
+
+.character-list td {
+    padding: 0.5em;
+}
+
+    .character-list td.details {
+        vertical-align: top;
+    }
+
+.character-list .portrait .missing {
+    background-color: #000;
+}
+
+.character-list .portrait img, .character-list .portrait .missing {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #CDCDCD;
+}

@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@(ViewBag.Title ?? "Balance")</title>
+
+    <link href="~/Content/balance/balance.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="banner">
+        <a href="@Url.Action("index", "Home")">
+            <div class="banner-left"></div>
+        </a>
+    </div>
+
+    <div class="navbar">
+        <a href="@Url.Action("pages", 0)">First page</a>
+        <a href="@Url.Action("pages", -1)">Latest page</a>
+
+        @if (ViewBag.ShowCharacters ?? true)
+        {
+            <a href="@Url.Action("characters")">Characters</a>
+        }
+    </div>    
+
+    <div class="page-background">
+        @RenderBody()
+    </div>
+</body>
+</html>

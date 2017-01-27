@@ -1,0 +1,10 @@
+﻿@using SpaceTrader.Views
+
+@model PageViewModel
+@{
+    Layout = "../Balance/_Layout.cshtml";
+    ViewBag.Title = string.Format("Balance (2006) - Chapter {0}, Page {1}", Model.Chapter.Number, Model.PageNumber);
+    ViewBag.ShowCharacters = false;
+}
+
+@ComicHelpers.ResponsiveComic(Url, Model, 500)

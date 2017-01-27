@@ -1,0 +1,46 @@
+﻿@using System.Collections.Generic
+@using SpaceTrader.Views
+
+@model IEnumerable<CharacterListViewModel>
+@{
+    ViewBag.Title = "Characters";
+    Layout = "_Layout.cshtml";
+}
+
+<h2>Characters</h2>
+
+<table class="character-list">
+    @foreach (var character in Model)
+    {
+    <text>
+        <tr class="character">
+            <td class="portrait">
+                @if (character.ImageURI != null)
+                {
+                    <img src="@character.ImageURI" title="@character.Name" alt="@character.Name">
+                }
+                else 
+                {
+                    <div class="missing"></div>
+                }
+            </td>
+
+            <td class="details">
+                <h2 class="character-name">@character.Name</h2>
+
+                @if (character.BioLines.Any())
+                {
+                    foreach (var line in character.BioLines)
+                    {
+                        <p class="bio">@line</p>
+                    }
+                }
+                else
+                {
+                    <p class="bio missing">(no bio available)</p>
+                }
+            </td>
+        </tr>
+    </text>
+    }
+</table>
