@@ -44,26 +44,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Controllers\BalanceController.cs" />
-    <Compile Include="Controllers\DeadlinesController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\OldBalanceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\CharacterListViewModel.cs" />
-    <Compile Include="Views\PageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\balance\header_left.png" />
     <Content Include="Content\balance\header_repeat.png" />
     <Content Include="Content\favicon.png" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\SpaceTrader.pubxml" />
     <Content Include="Content\balance-flag.png" />
     <Content Include="Content\balance-logo-7.png" />
@@ -85,13 +76,13 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Balance\_Layout.cshtml" />
-    <Content Include="Views\Balance\pages.cshtml" />
-    <Content Include="Views\Balance\characters.cshtml" />
+    <Content Include="Views\balance\_Layout.cshtml" />
+    <Content Include="Views\balance\pages.cshtml" />
+    <Content Include="Views\balance\characters.cshtml" />
     <Content Include="App_Code\ComicHelpers.cshtml" />
     <Content Include="Views\Home\index.cshtml" />
-    <Content Include="Views\Deadlines\pages.cshtml" />
-    <Content Include="Views\OldBalance\pages.cshtml" />
+    <Content Include="Views\deadlines\pages.cshtml" />
+    <Content Include="Views\php25\pages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

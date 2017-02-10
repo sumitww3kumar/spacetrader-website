@@ -53,6 +53,9 @@
     <Compile Include="AssemblyInfo.fs" />
     <Content Include="packages.config" />
     <Compile Include="LoadFolder.fs" />
+    <Compile Include="PageView.fs" />
+    <Compile Include="Controllers.fs" />
+    <Compile Include="ControllerFactory.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.Infrastructure">
@@ -84,7 +87,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Mvc">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Razor">

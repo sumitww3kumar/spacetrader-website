@@ -8,6 +8,8 @@ namespace SpaceTrader
     {
         protected void Application_Start()
         {
+            ControllerBuilder.Current.SetControllerFactory(new Controllers.ControllerFactory());
+            
             AreaRegistration.RegisterAllAreas();
             
             RouteTable.Routes.MapRoute(
