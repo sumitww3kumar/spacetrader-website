@@ -55,7 +55,6 @@
     <Compile Include="LoadFolder.fs" />
     <Compile Include="PageView.fs" />
     <Compile Include="Controllers.fs" />
-    <Compile Include="ControllerFactory.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.Infrastructure">
