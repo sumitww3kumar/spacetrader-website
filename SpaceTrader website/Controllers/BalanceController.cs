@@ -1,4 +1,4 @@
-﻿using SpaceTrader.Model;
+﻿using SpaceTrader.Comics;
 using SpaceTrader.Views;
 using System;
 using System.Collections.Generic;
@@ -17,17 +17,16 @@ namespace SpaceTrader.Controllers
 
         public BalanceController()
         {
-            folder = new ComicsFolder("balance");
+            folder = LoadFolder.OpenFolder("balance");
         }
 
         [ActionName("pages")]
         public ActionResult Pages(int id = -1)
         {
-            var page = folder.PageByIndex(id);
-            if (page == null)
+            var page = folder.PageByIndex(id).Get(or: () =>
             {
                 throw new HttpException(404, "Not found");
-            }
+            });
 
             return View("pages", new PageViewModel(folder, page));
         }

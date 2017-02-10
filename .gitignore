@@ -2,3 +2,5 @@ packages/
 SpaceTrader website/obj/
 SpaceTrader website/Properties/PublishProfiles/SpaceTrader.pubxml
 SpaceTrader website/bin/
+SpaceTraderComics/bin/
+SpaceTraderComics/obj/

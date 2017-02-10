@@ -51,10 +51,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Model\Chapter.cs" />
-    <Compile Include="Model\Character.cs" />
-    <Compile Include="Model\ComicsFolder.cs" />
-    <Compile Include="Model\Page.cs" />
+    <Compile Include="Interop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\CharacterListViewModel.cs" />
     <Compile Include="Views\PageViewModel.cs" />
@@ -66,7 +63,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\SpaceTrader.pubxml" />
     <Content Include="Content\balance-flag.png" />
@@ -105,6 +101,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -167,6 +164,12 @@
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceTraderComics\SpaceTraderComics.fsproj">
+      <Project>{21a51b61-40d2-4e35-96dd-491942e8a977}</Project>
+      <Name>SpaceTraderComics</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,4 @@
-﻿using SpaceTrader.Model;
+﻿using SpaceTrader.Comics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +52,7 @@ namespace SpaceTrader.Views
             Folder = new FolderViewModel(folder);
 
             var chapter = folder.PageChapter(page);
-            Chapter = new ChapterViewModel(chapter);
+            Chapter = new ChapterViewModel(chapter.Get());
             
             ImagePath = new Uri(folder.ImageRootUrl, page.ImagePath);
             PageNumber = page.PageNumber + 1;
